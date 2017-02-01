@@ -30,6 +30,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American /Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited = Array(repeating: false, count: 21)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,6 +71,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel?.text = restaurantLocations[indexPath.row]
         cell.typeLabel?.text = restaurantTypes[indexPath.row]
 
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+        
         return cell
     }
     
@@ -90,16 +94,28 @@ class RestaurantTableViewController: UITableViewController {
             style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: { (action:UIAlertAction!) -> Void in
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-        })
+        let checkInAction : UIAlertAction
+        if !self.restaurantIsVisited[indexPath.row] {
+            checkInAction = UIAlertAction(title: "Check in", style: .default, handler: { (action:UIAlertAction!) -> Void in
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.accessoryType = .checkmark
+                self.restaurantIsVisited[indexPath.row] = true
+            })
+        } else {
+            checkInAction = UIAlertAction(title: "Undo Check in", style: .default, handler: { (action:UIAlertAction!) -> Void in
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.accessoryType = .none
+                self.restaurantIsVisited[indexPath.row] = false
+            })
+        }
+        
         optionMenu.addAction(checkInAction)
         
         optionMenu.addAction(cancelAction)
         // Display the menu
         present(optionMenu, animated: true, completion: nil)
         
+        tableView.deselectRow(at: indexPath, animated: false)
     }
  
 
