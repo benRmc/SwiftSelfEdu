@@ -117,7 +117,48 @@ class RestaurantTableViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        
+//        if editingStyle == .delete {
+//            restaurantNames.remove(at: indexPath.row)
+//            restaurantLocations.remove(at: indexPath.row)
+//            restaurantTypes.remove(at: indexPath.row)
+//            restaurantIsVisited.remove(at: indexPath.row)
+//            restaurantImages.remove(at: indexPath.row)
+//        }
+//        
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//    }
  
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {(action, indexPath) -> Void in
+            let defualtText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            
+            if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
+                let activityController = UIActivityViewController(activityItems: [defualtText, imageToShare], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+
+        })
+        
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: {(action, indexPath) -> Void in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurantImages.remove(at: indexPath.row)
+
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        })
+        
+        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 173.0/255.0,
+                                              blue: 99.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0,
+                                               blue: 203.0/255.0, alpha: 1.0)
+        
+        return [deleteAction, shareAction]
+    }
 
     /*
     // Override to support conditional editing of the table view.
