@@ -13,6 +13,7 @@
 		438CB8661E410518008C1886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438CB8641E410518008C1886 /* LaunchScreen.storyboard */; };
 		438CB86E1E411D9B008C1886 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438CB86D1E411D9B008C1886 /* RestaurantTableViewController.swift */; };
 		438CB8701E413035008C1886 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438CB86F1E413035008C1886 /* RestaurantTableViewCell.swift */; };
+		B5CBB9A91E45112C00ADB481 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBB9A81E45112C00ADB481 /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		438CB8671E410518008C1886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438CB86D1E411D9B008C1886 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		438CB86F1E413035008C1886 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		B5CBB9A81E45112C00ADB481 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				438CB85B1E410518008C1886 /* AppDelegate.swift */,
 				438CB85F1E410518008C1886 /* Main.storyboard */,
+				B5CBB9A81E45112C00ADB481 /* RestaurantDetailViewController.swift */,
 				438CB86F1E413035008C1886 /* RestaurantTableViewCell.swift */,
 				438CB86D1E411D9B008C1886 /* RestaurantTableViewController.swift */,
 				438CB8621E410518008C1886 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			files = (
 				438CB86E1E411D9B008C1886 /* RestaurantTableViewController.swift in Sources */,
 				438CB8701E413035008C1886 /* RestaurantTableViewCell.swift in Sources */,
+				B5CBB9A91E45112C00ADB481 /* RestaurantDetailViewController.swift in Sources */,
 				438CB85C1E410518008C1886 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				438CB86C1E410518008C1886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
