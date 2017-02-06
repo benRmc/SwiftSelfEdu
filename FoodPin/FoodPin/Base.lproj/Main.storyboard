@@ -109,24 +109,45 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UW-JK-R8q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-hq-eDJ">
-                                <rect key="frame" x="166" y="248" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="by6-qT-OwY">
+                                <rect key="frame" x="157.5" y="287.5" width="60" height="93.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-hq-eDJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9le-Hg-05P">
+                                        <rect key="frame" x="5.5" y="39" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBm-9w-drO">
+                                        <rect key="frame" x="9" y="73" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1UW-JK-R8q" secondAttribute="trailing" id="MyT-Do-2iA"/>
-                            <constraint firstItem="1UW-JK-R8q" firstAttribute="leading" secondItem="vRr-jT-8Ja" secondAttribute="leading" id="WC2-P9-qVY"/>
-                            <constraint firstItem="dag-2R-z7g" firstAttribute="top" secondItem="1UW-JK-R8q" secondAttribute="bottom" id="bLV-Hm-zEr"/>
-                            <constraint firstItem="1UW-JK-R8q" firstAttribute="top" secondItem="ZNC-n3-ewK" secondAttribute="bottom" id="euu-xW-4Ec"/>
+                            <constraint firstItem="1UW-JK-R8q" firstAttribute="top" secondItem="ZNC-n3-ewK" secondAttribute="bottom" id="2r6-Ba-Ma0"/>
+                            <constraint firstItem="1UW-JK-R8q" firstAttribute="leading" secondItem="vRr-jT-8Ja" secondAttribute="leading" id="4Pf-uR-nha"/>
+                            <constraint firstItem="by6-qT-OwY" firstAttribute="centerY" secondItem="vRr-jT-8Ja" secondAttribute="centerY" id="epc-to-4x8"/>
+                            <constraint firstAttribute="trailing" secondItem="1UW-JK-R8q" secondAttribute="trailing" id="g3P-bb-j5M"/>
+                            <constraint firstItem="dag-2R-z7g" firstAttribute="top" secondItem="1UW-JK-R8q" secondAttribute="bottom" id="uRc-k8-INc"/>
+                            <constraint firstItem="by6-qT-OwY" firstAttribute="centerX" secondItem="vRr-jT-8Ja" secondAttribute="centerX" id="zQu-zp-NJL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="restaurantImageView" destination="1UW-JK-R8q" id="HnF-1b-aGd"/>
+                        <outlet property="restaurantImageView" destination="1UW-JK-R8q" id="gHg-7t-R9y"/>
+                        <outlet property="restaurantLocationLabel" destination="9le-Hg-05P" id="yuf-BW-d6P"/>
+                        <outlet property="restaurantNameLabel" destination="qJb-hq-eDJ" id="RGi-lv-5GS"/>
+                        <outlet property="restaurantTypeLabel" destination="cBm-9w-drO" id="7mO-gX-TWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKZ-6c-zjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
