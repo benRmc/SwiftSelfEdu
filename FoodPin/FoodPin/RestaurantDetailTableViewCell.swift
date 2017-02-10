@@ -2,8 +2,8 @@
 //  RestaurantDetailTableViewCell.swift
 //  FoodPin
 //
-//  Created by Ben on 2017-02-08.
-//  Copyright © 2017 Ben. All rights reserved.
+//  Created by Simon Ng on 28/7/2016.
+//  Copyright © 2016 AppCoda. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class RestaurantDetailTableViewCell: UITableViewCell {
 
     @IBOutlet var fieldLabel:UILabel!
     @IBOutlet var valueLabel:UILabel!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

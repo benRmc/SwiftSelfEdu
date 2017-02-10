@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "438CB8571E410518008C1886"
+               BlueprintIdentifier = "F4D336BD1D2E4309003010DD"
                BuildableName = "FoodPin.app"
                BlueprintName = "FoodPin"
                ReferencedContainer = "container:FoodPin.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "438CB8571E410518008C1886"
+            BlueprintIdentifier = "F4D336BD1D2E4309003010DD"
             BuildableName = "FoodPin.app"
             BlueprintName = "FoodPin"
             ReferencedContainer = "container:FoodPin.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "438CB8571E410518008C1886"
+            BlueprintIdentifier = "F4D336BD1D2E4309003010DD"
             BuildableName = "FoodPin.app"
             BlueprintName = "FoodPin"
             ReferencedContainer = "container:FoodPin.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "438CB8571E410518008C1886"
+            BlueprintIdentifier = "F4D336BD1D2E4309003010DD"
             BuildableName = "FoodPin.app"
             BlueprintName = "FoodPin"
             ReferencedContainer = "container:FoodPin.xcodeproj">

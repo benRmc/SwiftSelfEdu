@@ -2,19 +2,19 @@
 //  RestaurantTableViewCell.swift
 //  FoodPin
 //
-//  Created by 漠川 阮 on 2017-01-31.
-//  Copyright © 2017 Ben. All rights reserved.
+//  Created by Simon Ng on 11/7/2016.
+//  Copyright © 2016 AppCoda. All rights reserved.
 //
 
 import UIKit
 
 class RestaurantTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var thumbnailImageView: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
