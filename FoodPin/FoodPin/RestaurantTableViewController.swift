@@ -43,7 +43,8 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.hidesBarsOnSwipe = true
         
-        tableView.estimatedRowHeight = 36.0
+        // Enable Self Sizing Cells
+        tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
